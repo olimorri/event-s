@@ -8,10 +8,8 @@ const config = require('./config');
 const app = express();
 
 const corsConfig = {
-
   origin: 'http://localhost:3000',
   credentials: true,
-
 };
 
 app.use(cors(corsConfig));
@@ -31,7 +29,7 @@ app.use(
       // we would want to set secure=true in a production environment
       secure: false,
     },
-  })
+  }),
 );
 app.use(router);
 app.get('*', (req, res) => {
@@ -65,5 +63,3 @@ app.get('*', (req, res) => {
     console.log(O_O);
   }
 })();
-
-// commitizen test

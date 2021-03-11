@@ -33,7 +33,6 @@ export default function Events({ value }) {
         checkBoxes.includes(event.type),
       );
       setFilteredEvents(checkboxes);
-      console.log(checkBoxes);
     }
   }
   useEffect(() => {

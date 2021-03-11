@@ -49,8 +49,7 @@ function App() {
             return copy;
           }),
         )
-        .then(() => updateUser())
-        .then(console.log(user));
+        .then(() => updateUser());
     } else {
       EventsApiService.signDown(id)
         .then((updated) =>
@@ -63,8 +62,7 @@ function App() {
             return copy;
           }),
         )
-        .then(() => updateUser())
-        .then(console.log(user));
+        .then(() => updateUser());
     }
   };
   function updateUser() {

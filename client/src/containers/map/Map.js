@@ -28,7 +28,6 @@ export default function Map({ filteredEvents }) {
     const fetchData = () => {
       const newFeaturesList = [];
       filteredEvents.forEach((el) => {
-        console.log(el);
         const id = el._id;
         const location = el.geolocation.split(',');
         const longitude = location[0];

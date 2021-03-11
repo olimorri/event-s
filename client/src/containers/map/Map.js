@@ -5,16 +5,15 @@ import mapboxgl from 'mapbox-gl';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
-export default function Map ({ filteredEvents }) {
-
+export default function Map({ filteredEvents }) {
   const mapContainer = useRef(null);
   const [lng, setLng] = useState(-0.1);
   const [lat, setLat] = useState(51.5);
   const [zoom, setZoom] = useState(9.8);
   useEffect(() => {
     const map = new mapboxgl.Map({
-      container: "mapContainer",
-      style: "mapbox://styles/mapbox/streets-v11",
+      container: 'mapContainer',
+      style: 'mapbox://styles/mapbox/streets-v11',
       center: [lng, lat],
       zoom: zoom,
     });
@@ -26,14 +25,13 @@ export default function Map ({ filteredEvents }) {
 
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
-
     const fetchData = () => {
       const newFeaturesList = [];
-      filteredEvents.forEach(el => {
+      filteredEvents.forEach((el) => {
         const id = el._id;
-        const location = el.geolocation.split(',')
+        const location = el.geolocation.split(',');
         const longitude = location[0];
-        const latitude = location[1]
+        const latitude = location[1];
         newFeaturesList.push({
           type: 'Feature',
           geometry: {
@@ -46,7 +44,7 @@ export default function Map ({ filteredEvents }) {
             description: `${el.description} #${id}`,
           },
         });
-      })
+      });
 
       return Promise.resolve({
         type: 'FeatureCollection',
@@ -54,19 +52,16 @@ export default function Map ({ filteredEvents }) {
       });
     };
 
-
     map.on('load', async () => {
       // get center coordinates
       const { lng, lat } = map.getCenter();
       // fetch new data
       const results = await fetchData({ longitude: lng, latitude: lat });
       // iterate through the feature collection and append marker to the map for each feature
-      results.features.forEach(result => {
+      results.features.forEach((result) => {
         const { geometry } = result;
         // add marker to map
-        new mapboxgl.Marker()
-          .setLngLat(geometry.coordinates)
-          .addTo(map);
+        new mapboxgl.Marker().setLngLat(geometry.coordinates).addTo(map);
       });
     });
 
@@ -76,28 +71,25 @@ export default function Map ({ filteredEvents }) {
       // fetch new data
       const results = await fetchData({ longitude: lng, latitude: lat });
       // iterate through the feature collection and append marker to the map for each feature
-      results.features.forEach(result => {
+      results.features.forEach((result) => {
         const { geometry } = result;
         // create marker node
         // const markerNode = document.createElement('div');
         // ReactDOM.render(<Marker id={id} />, markerNode);
         // add marker to map
-        new mapboxgl.Marker()
-          .setLngLat(geometry.coordinates)
-          .addTo(map);
+        new mapboxgl.Marker().setLngLat(geometry.coordinates).addTo(map);
       });
     });
     return () => map.remove();
   }, [filteredEvents]);
 
-
   return (
-    <div className='relative-container'>
-      <div className="relative" >
+    <div className="relative-container">
+      <div className="relative">
         <div>
           <div id="mapContainer" className="map" ref={mapContainer}></div>
         </div>
       </div>
     </div>
-  )
+  );
 }

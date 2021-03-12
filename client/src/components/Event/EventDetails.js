@@ -10,11 +10,11 @@ import { motion } from 'framer-motion';
 export default function EventDetails({ events, signUpDown, user }) {
   let { id } = useParams();
   const event = events.find((el) => el._id === id); //here event should be of type 'Event' => so we could define what an event is in an interface and the use it
-  const handleSubmit = (e: MouseEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     signUpDown('up', id);
   };
-  const unattend = (e: MouseEvent) => {
+  const unattend = (e) => {
     e.preventDefault();
     signUpDown('down', id);
   };

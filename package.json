@@ -4,7 +4,11 @@
   "description": "EVENT-S",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .ts,.tsx",
+    "lint client": "cd ./client && npm run lint",
+    "lint server": "cd ./server && npm run lint",
+    "work": "npm run lint client && npm run lint server"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,10 @@
   },
   "homepage": "https://github.com/olimorri/event-s#readme",
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "typescript": "^4.2.3"
   },
   "config": {
     "commitizen": {
@@ -29,7 +36,7 @@
     "@types/node": "^14.14.33",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.3"
+    "eslint": "^7.21.0",
+    "prettier": "^2.2.1"
   }
 }

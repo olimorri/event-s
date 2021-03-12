@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import UsersApiService from '../../services/UsersApiService';
 import { Link as RouterLink } from 'react-router-dom';
+import { User } from '../../interfaces/User';
 
 import {
   Flex,
@@ -15,11 +16,18 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-export default function Profile({ user, setUser }) {
+export default function Profile(props: any) {
+  const user: User = props.user;
+  const setUser: Function = props.setUser;
   useEffect(() => {
     const getProfile = async () => {
       const userInfo = await UsersApiService.profile();
-      if (userInfo) {
+
+      function isUser(userInfo: any): userInfo is User {
+        return userInfo.error === undefined;
+      }
+
+      if (isUser(userInfo)) {
         setUser(userInfo);
       } else {
         console.log('No user info found 😞');
@@ -49,7 +57,7 @@ export default function Profile({ user, setUser }) {
             scale: 1,
           }}
           transition={{
-            type: 'spring',
+            // type: 'spring',
             // stiffness: 100,
             // @ts-ignore
             ease: 'easeIn',
@@ -85,7 +93,7 @@ export default function Profile({ user, setUser }) {
                         x: 0,
                       }}
                       transition={{
-                        type: 'spring',
+                        //type: 'spring',
                         // stiffness: 100,
                         // @ts-ignore
                         ease: 'easeIn',
@@ -121,7 +129,7 @@ export default function Profile({ user, setUser }) {
                         scale: 1,
                       }}
                       transition={{
-                        type: 'spring',
+                        //type: 'spring',
                         stiffness: 100,
                         // @ts-ignore
                         ease: 'easeIn',
@@ -153,7 +161,7 @@ export default function Profile({ user, setUser }) {
                       x: 0,
                     }}
                     transition={{
-                      type: 'spring',
+                      //type: 'spring',
                       // stiffness: 100,
                       // @ts-ignore
                       ease: 'easeIn',
@@ -183,7 +191,7 @@ export default function Profile({ user, setUser }) {
                       x: 0,
                     }}
                     transition={{
-                      type: 'spring',
+                      //type: 'spring',
                       // stiffness: 100,
                       // @ts-ignore
                       ease: 'easeIn',
@@ -230,7 +238,7 @@ export default function Profile({ user, setUser }) {
                             scale: 1,
                           }}
                           transition={{
-                            type: 'spring',
+                            //type: 'spring',
                             stiffness: 100,
                             // @ts-ignore
                             ease: 'easeIn',

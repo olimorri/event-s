@@ -1,6 +1,8 @@
+import { Event } from './Event';
+
 export interface User {
   email: string;
-  eventList: string[];
+  eventList: Event[];
   firstName: string;
   lastName: string;
   host: boolean;

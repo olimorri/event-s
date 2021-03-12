@@ -25,7 +25,6 @@ import {
   ButtonGroup,
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 export default function NavigationBar({ isAuthenticated, user }) {
   return (

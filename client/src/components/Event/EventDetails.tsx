@@ -6,19 +6,27 @@ import Attend from './Buttons/Attend';
 import Unattend from './Buttons/Unattend';
 import moment from 'moment';
 import { motion } from 'framer-motion';
+import {Event} from '../../interfaces/Event'
+import {User} from '../../interfaces/User'
 
-export default function EventDetails({ events, signUpDown, user }) {
-  let { id } = useParams();
-  const event = events.find((el) => el._id === id); //here event should be of type 'Event' => so we could define what an event is in an interface and the use it
-  const handleSubmit = (e) => {
+type EventDetailProps = {
+  events: Event[],
+  signUpDown: Function,
+  user: User
+}
+
+export default function EventDetails({ events, signUpDown, user }: EventDetailProps) {
+  let { id }: {id: string} = useParams();
+  const event: Event | undefined = events.find((el: Event) => el._id === id);
+  const handleSubmit = (e: MouseEvent) => {
     e.preventDefault();
     signUpDown('up', id);
   };
-  const unattend = (e) => {
+  const unattend = (e: MouseEvent) => {
     e.preventDefault();
     signUpDown('down', id);
   };
-
+  console.log(user.eventList);
   return (
     <Flex
       minH={'100vh'}
@@ -70,7 +78,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                 </Flex>
                 {!Object.keys(user).length ||
                 user.host ? null : !user.eventList.some(
-                    (el) => el._id === id,
+                    (el: Event) => el._id === id,
                   ) ? (
                   <Attend handleSubmit={handleSubmit} />
                 ) : (
@@ -102,8 +110,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                       x: 0,
                     }}
                     transition={{
-                      type: 'spring',
-                      // @ts-ignore
+                      // type: 'spring',
                       ease: 'easeIn',
                       delay: 0.5,
                       duration: 0.5,
@@ -132,8 +139,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                       x: 0,
                     }}
                     transition={{
-                      type: 'spring',
-                      // @ts-ignore
+                      // type: 'spring',
                       ease: 'easeIn',
                       delay: 0.6,
                       duration: 0.5,
@@ -160,8 +166,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                       x: 0,
                     }}
                     transition={{
-                      type: 'spring',
-                      // @ts-ignore
+                      // type: 'spring',
                       ease: 'easeIn',
                       delay: 0.7,
                       duration: 0.5,
@@ -188,7 +193,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                       x: 0,
                     }}
                     transition={{
-                      type: 'spring',
+                      // type: 'spring',
                       // @ts-ignore
                       ease: 'easeIn',
                       delay: 0.8,
@@ -216,7 +221,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                       x: 0,
                     }}
                     transition={{
-                      type: 'spring',
+                      // type: 'spring',
                       // @ts-ignore
                       ease: 'easeIn',
                       delay: 0.9,
@@ -255,8 +260,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                       scale: 1,
                     }}
                     transition={{
-                      type: 'spring',
-                      // @ts-ignore
+                      // type: 'spring',
                       ease: 'easeIn',
                       delay: 1,
                       duration: 1,

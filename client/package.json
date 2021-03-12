@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "@types/react-router": "^5.1.12",
     "framer-motion": "^3.10.3",
     "mapbox-gl": "^2.1.1",
     "moment": "^2.29.1",

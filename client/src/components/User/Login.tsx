@@ -15,6 +15,8 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { UserProps } from '../../interfaces/UserProps';
+import { User } from '../../interfaces/User';
+import { UserRequestError } from '../../interfaces/UserRequestError';
 
 const initialState = {
   email: '',
@@ -38,7 +40,7 @@ export default function Login(props: UserProps) {
     const email: string = state.email;
     const password: string = state.password;
     const user: {} = { email, password };
-    const res = await UsersApiService.login(user);
+    const res: User | UserRequestError = await UsersApiService.login(user);
     console.log(res);
     //{error: "401", message: "Username or password is incorrect"}
 

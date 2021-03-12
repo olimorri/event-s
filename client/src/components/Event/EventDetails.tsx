@@ -6,17 +6,15 @@ import Attend from './Buttons/Attend';
 import Unattend from './Buttons/Unattend';
 import moment from 'moment';
 import { motion } from 'framer-motion';
-import {Event} from '../../interfaces/Event'
-import {User} from '../../interfaces/User'
+import { Event } from '../../interfaces/Event';
+import { EventDetailsProps } from '../../interfaces/EventDetailsProps';
 
-type EventDetailProps = {
-  events: Event[],
-  signUpDown: Function,
-  user: User
-}
-
-export default function EventDetails({ events, signUpDown, user }: EventDetailProps) {
-  let { id }: {id: string} = useParams();
+export default function EventDetails({
+  events,
+  signUpDown,
+  user,
+}: EventDetailsProps) {
+  let { id }: { id: string } = useParams();
   const event: Event | undefined = events.find((el: Event) => el._id === id);
   const handleSubmit = (e: MouseEvent) => {
     e.preventDefault();

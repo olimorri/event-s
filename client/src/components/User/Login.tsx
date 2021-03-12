@@ -42,8 +42,6 @@ export default function Login(props: UserProps) {
     const user: {} = { email, password };
     const res: User | UserRequestError = await UsersApiService.login(user);
     console.log(res);
-    //{error: "401", message: "Username or password is incorrect"}
-
     if (res.error) {
       alert(`${res.message}`);
       setState(initialState);

@@ -82,6 +82,7 @@ export default function NewEvent({ createEvent, user }) {
           transition={{
             type: 'spring',
             stiffness: 100,
+            // @ts-ignore
             ease: 'easeIn',
             delay: 0.5,
             duration: 1,

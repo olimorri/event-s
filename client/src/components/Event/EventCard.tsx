@@ -22,6 +22,7 @@ function EventCard ({value}) {
           <motion.div 
           animate={{
               scale: [1, 0.8, 1],
+              // @ts-ignore
               duration: 0.5
             }} 
           transition={{

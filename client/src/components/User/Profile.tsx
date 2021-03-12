@@ -51,6 +51,7 @@ export default function Profile({ user, setUser }) {
           transition={{
             type: 'spring',
             // stiffness: 100,
+            // @ts-ignore
             ease: 'easeIn',
             duration: 1,
           }}
@@ -86,6 +87,7 @@ export default function Profile({ user, setUser }) {
                       transition={{
                         type: 'spring',
                         // stiffness: 100,
+                        // @ts-ignore
                         ease: 'easeIn',
                         delay: 0.5,
                         duration: 1,
@@ -121,6 +123,7 @@ export default function Profile({ user, setUser }) {
                       transition={{
                         type: 'spring',
                         stiffness: 100,
+                        // @ts-ignore
                         ease: 'easeIn',
                         delay: 2,
                         duration: 4,
@@ -152,6 +155,7 @@ export default function Profile({ user, setUser }) {
                     transition={{
                       type: 'spring',
                       // stiffness: 100,
+                      // @ts-ignore
                       ease: 'easeIn',
                       delay: 0.7,
                       duration: 1,
@@ -181,6 +185,7 @@ export default function Profile({ user, setUser }) {
                     transition={{
                       type: 'spring',
                       // stiffness: 100,
+                      // @ts-ignore
                       ease: 'easeIn',
                       delay: 0.9,
                       duration: 1,
@@ -227,6 +232,7 @@ export default function Profile({ user, setUser }) {
                           transition={{
                             type: 'spring',
                             stiffness: 100,
+                            // @ts-ignore
                             ease: 'easeIn',
                             delay: 1,
                             duration: 1,

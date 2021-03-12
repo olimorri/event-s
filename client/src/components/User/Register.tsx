@@ -85,6 +85,7 @@ export default function Register(props) {
           transition={{
             type: 'spring',
             stiffness: 100,
+            // @ts-ignore
             ease: 'linear',
           }}
           exit={{

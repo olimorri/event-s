@@ -103,6 +103,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                     }}
                     transition={{
                       type: 'spring',
+                      // @ts-ignore
                       ease: 'easeIn',
                       delay: 0.5,
                       duration: 0.5,
@@ -132,6 +133,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                     }}
                     transition={{
                       type: 'spring',
+                      // @ts-ignore
                       ease: 'easeIn',
                       delay: 0.6,
                       duration: 0.5,
@@ -159,6 +161,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                     }}
                     transition={{
                       type: 'spring',
+                      // @ts-ignore
                       ease: 'easeIn',
                       delay: 0.7,
                       duration: 0.5,
@@ -186,6 +189,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                     }}
                     transition={{
                       type: 'spring',
+                      // @ts-ignore
                       ease: 'easeIn',
                       delay: 0.8,
                       duration: 0.5,
@@ -213,6 +217,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                     }}
                     transition={{
                       type: 'spring',
+                      // @ts-ignore
                       ease: 'easeIn',
                       delay: 0.9,
                       duration: 0.5,
@@ -251,6 +256,7 @@ export default function EventDetails({ events, signUpDown, user }) {
                     }}
                     transition={{
                       type: 'spring',
+                      // @ts-ignore
                       ease: 'easeIn',
                       delay: 1,
                       duration: 1,

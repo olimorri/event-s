@@ -71,6 +71,7 @@ export default function Login(props) {
       transition={{
         type: 'spring',
         stiffness: 100,
+        // @ts-ignore
         ease: 'easeIn'
       }}
       exit={{

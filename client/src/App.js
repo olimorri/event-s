@@ -16,7 +16,7 @@ import Events from './containers/Events/Events';
 import EventDetails from './components/Event/EventDetails';
 import NewEvent from './containers/Events/NewEvent';
 import Footer from './components/Footer';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const [status, setStatus] = useState(false);

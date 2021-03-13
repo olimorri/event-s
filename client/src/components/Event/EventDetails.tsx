@@ -16,11 +16,11 @@ export default function EventDetails({
 }: EventDetailsProps) {
   let { id }: { id: string } = useParams();
   const event: Event | undefined = events.find((el: Event) => el._id === id);
-  const attend = (e: MouseEvent) => {
+  const attend = (e: MouseEvent): void => {
     e.preventDefault();
     signUpDown('up', id);
   };
-  const unattend = (e: MouseEvent) => {
+  const unattend = (e: MouseEvent): void => {
     e.preventDefault();
     signUpDown('down', id);
   };

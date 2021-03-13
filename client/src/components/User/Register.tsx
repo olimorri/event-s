@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Link as RouterLink } from 'react-router-dom';
 import UsersApiService from '../../services/UsersApiService';
 import auth from '../../utils/auth';
 import {
@@ -15,30 +14,55 @@ import {
   FormHelperText,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { UserProps } from '../../interfaces/UserProps';
+
+let email: string = '';
+let password: string = '';
+let firstName: string = '';
+let lastName: string = '';
+let photo: string = '';
+let host: boolean = false;
+
+let userTypeChosen: boolean = false;
+
 const initialState = {
-  email: '',
-  password: '',
-  firstName: '',
-  lastName: '',
-  photo: '',
-  host: '',
+  email,
+  password,
+  firstName,
+  lastName,
+  photo,
+  host,
 };
 
-export default function Register(props) {
+export default function Register(props: UserProps) {
   const [state, setState] = useState(initialState);
 
-  const handleChange = (e) => {
-    let { name, value } = e.target;
-    if (name === 'host') {
-      value = value === 'Guest' ? false : true;
-    }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let name: string = e.target.name;
+    let value: string | boolean = e.target.value;
+
     setState((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleUserSelection = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    userTypeChosen = true;
+    let name: string = e.target.name;
+    let value: string = e.target.value;
+
+    if (name === 'host') {
+      if (value !== 'Guest') {
+        setState((prevState) => ({
+          ...prevState,
+          host: true,
+        }));
+      }
+    }
+  };
+
+  const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault();
 
     const { email, password, firstName, lastName, host, photo } = state;
@@ -54,13 +78,14 @@ export default function Register(props) {
   };
 
   const validateForm = () => {
-    return (
+    if (
       !state.email ||
       !state.password ||
       !state.firstName ||
       !state.lastName ||
-      !state.host === ''
-    );
+      userTypeChosen === false
+    )
+      return false;
   };
   return (
     <Flex
@@ -83,7 +108,7 @@ export default function Register(props) {
             scale: 1,
           }}
           transition={{
-            type: 'spring',
+            // type: 'spring',
             stiffness: 100,
             // @ts-ignore
             ease: 'linear',
@@ -157,7 +182,7 @@ export default function Register(props) {
                   <FormLabel>Type of user</FormLabel>
                   <Select
                     name="host"
-                    onChange={handleChange}
+                    onChange={handleUserSelection}
                     placeholder="Hosting or attending?"
                   >
                     <option>Guest</option>
@@ -171,7 +196,7 @@ export default function Register(props) {
                     bg: 'custom.300',
                   }}
                   isDisabled={validateForm()}
-                  onClick={handleSubmit}
+                  onClick={handleClick}
                 >
                   Sign up
                 </Button>

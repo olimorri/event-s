@@ -1,13 +1,16 @@
+import { Event } from '../interfaces/Event';
+import { User } from '../interfaces/User';
+
 /* eslint-disable import/no-anonymous-default-export */
 const URL = 'http://localhost:4000';
 
-function getEvents() {
+function getEvents(): Promise<Event[]> {
   return fetchRequest('/events');
 }
-function getSingleEvent(id) {
+function getSingleEvent(id: string): Promise<Event> {
   return fetchRequest('/events/' + id);
 }
-function createEvent(body) {
+function createEvent(body: Event): Promise<Event> {
   return fetchRequest('/events', {
     method: 'POST',
     credentials: 'include',
@@ -19,7 +22,7 @@ function createEvent(body) {
   });
 }
 
-function signUp(id) {
+function signUp(id: string): Promise<User> {
   return fetch(`${URL}/events/${id}/up`, {
     method: 'POST',
     credentials: 'include',
@@ -29,7 +32,7 @@ function signUp(id) {
     .then((res) => res.json())
     .catch((err) => console.log(err));
 }
-function signDown(id) {
+function signDown(id: string): Promise<User> {
   return fetch(`${URL}/events/${id}/down`, {
     method: 'POST',
     credentials: 'include',
@@ -40,7 +43,7 @@ function signDown(id) {
     .catch((err) => console.log(err));
 }
 
-function fetchRequest(path, options) {
+function fetchRequest(path: string, options?: RequestInit | undefined) {
   return fetch(URL + path, options)
     .then((res) => (res.status <= 400 ? res : Promise.reject()))
     .then((response) => (response.status === 204 ? response : response.json()))

@@ -17,34 +17,36 @@ import EventDetails from './components/Event/EventDetails';
 import NewEvent from './containers/Events/NewEvent';
 import Footer from './components/Footer';
 import { AnimatePresence } from 'framer-motion';
+import { Event } from './interfaces/Event';
 
 function App() {
   const [status, setStatus] = useState(false);
-  const [events, setEvents] = useState([]);
+  const initialEventState: Event[] = [];
+  const [events, setEvents] = useState(initialEventState);
   const initialState = auth.isAuthenticated();
   const [isAuthenticated, setIsAuthenticated] = useState(initialState);
   const [user, setUser] = useState({});
 
   useEffect(() => {
     EventsApiService.getEvents()
-      .then((event) => setEvents(event))
+      .then((event: Event[]) => setEvents(event))
       .then(() => setStatus(true));
   }, []);
 
-  const createEvent = (body) => {
+  const createEvent = (body: Event) => {
     EventsApiService.createEvent(body).then((event) =>
       setEvents([...events, event]),
     );
   };
-  const signUpDown = (dir, id) => {
+  const signUpDown = (dir: string, id: string) => {
     if (dir === 'up') {
       EventsApiService.signUp(id)
         .then((updated) =>
           setEvents((events) => {
-            const index = events.findIndex(
+            const index: number = events.findIndex(
               (event) => event._id === updated._id,
             );
-            const copy = [...events];
+            const copy: Event[] = [...events];
             copy.splice(index, 1, updated);
             return copy;
           }),

@@ -22,7 +22,7 @@ function createEvent(body: Event): Promise<Event> {
   });
 }
 
-function signUp(id: string): Promise<User> {
+function signUp(id: string): Promise<Event> {
   return fetch(`${URL}/events/${id}/up`, {
     method: 'POST',
     credentials: 'include',
@@ -32,7 +32,7 @@ function signUp(id: string): Promise<User> {
     .then((res) => res.json())
     .catch((err) => console.log(err));
 }
-function signDown(id: string): Promise<User> {
+function signDown(id: string): Promise<Event> {
   return fetch(`${URL}/events/${id}/down`, {
     method: 'POST',
     credentials: 'include',

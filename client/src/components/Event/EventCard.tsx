@@ -11,9 +11,9 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import moment from 'moment';
 import { motion } from 'framer-motion';
-import { EventCardProps } from '../../interfaces/EventCardProps';
+import { Event } from '../../interfaces/Event';
 
-function EventCard({ value }: EventCardProps) {
+function EventCard({ event }: { event: Event }) {
   return (
     <Box
       maxW={'40%'}
@@ -47,8 +47,8 @@ function EventCard({ value }: EventCardProps) {
       >
         <RouterLink
           to={{
-            pathname: `/events/${value._id}`,
-            state: { event: value },
+            pathname: `/events/${event._id}`,
+            state: { event: event },
           }}
         >
           <Flex
@@ -66,7 +66,7 @@ function EventCard({ value }: EventCardProps) {
             >
               <Image
                 borderRadius="md"
-                src={value.photo}
+                src={event.photo}
                 // layout={'fill'}
               />
             </Box>
@@ -76,10 +76,10 @@ function EventCard({ value }: EventCardProps) {
                 fontSize={'medium'}
                 fontFamily={'body'}
               >
-                {value.name}
+                {event.name}
               </Heading>
-              <Text color={'gray.500'}>{value.location}</Text>
-              <Text>{moment(value.date).format('MMM Do YY')}</Text>
+              <Text color={'gray.500'}>{event.location}</Text>
+              <Text>{moment(event.date).format('MMM Do YY')}</Text>
             </Stack>
           </Flex>
         </RouterLink>

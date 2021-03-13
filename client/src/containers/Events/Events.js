@@ -8,14 +8,14 @@ import Spinner from '../../components/Handling/Spinner';
 import { Box, Flex, Text, Stack, Heading } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-export default function Events({ value }) {
-  const [filteredEvents, setFilteredEvents] = useState([...value]);
+export default function Events({ events }) {
+  const [filteredEvents, setFilteredEvents] = useState([...events]);
   const [searchTerm, setSearchTerm] = useState('');
   const [checkBoxes, setCheckboxes] = useState([]);
 
   function search() {
     if (!searchTerm && checkBoxes.length) return check();
-    const events = checkBoxes.length ? filteredEvents : value;
+    const events = checkBoxes.length ? filteredEvents : events;
     const search = events.filter(
       (event) =>
         event.name.toLowerCase().includes(searchTerm) ||
@@ -24,11 +24,11 @@ export default function Events({ value }) {
     setFilteredEvents(search);
   }
   function check() {
-    if (!checkBoxes.length && !searchTerm) return setFilteredEvents(value);
+    if (!checkBoxes.length && !searchTerm) return setFilteredEvents(events);
     if (!checkBoxes.length && searchTerm) {
       search();
     } else {
-      const events = searchTerm ? filteredEvents : value;
+      const events = searchTerm ? filteredEvents : events;
       const checkboxes = events.filter((event) =>
         checkBoxes.includes(event.type),
       );
@@ -36,7 +36,7 @@ export default function Events({ value }) {
     }
   }
   useEffect(() => {
-    if (!checkBoxes.length && !searchTerm) return setFilteredEvents(value);
+    if (!checkBoxes.length && !searchTerm) return setFilteredEvents(events);
     if (checkBoxes.length && !searchTerm) {
       check();
     }
@@ -115,7 +115,7 @@ export default function Events({ value }) {
                 setSearchTerm={setSearchTerm}
               />
               <Box w={'100%'} overflow={'scroll'} h={'100vh'} mt={10}>
-                <EventList value={filteredEvents} />
+                <EventList events={filteredEvents} />
               </Box>
             </Flex>
           </>

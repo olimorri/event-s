@@ -75,7 +75,6 @@ function App() {
       ) : (
         <main>
           <NavBar isAuthenticated={isAuthenticated} user={user} />
-          {/* <Image /> */}
           <AnimatePresence>
             <Switch>
               <Route path="/" exact component={Home} />

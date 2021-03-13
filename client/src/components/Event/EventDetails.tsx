@@ -24,7 +24,7 @@ export default function EventDetails({
     e.preventDefault();
     signUpDown('down', id);
   };
-  console.log(user.eventList);
+
   return (
     <Flex
       minH={'100vh'}

@@ -11,10 +11,9 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import moment from 'moment';
 import { motion } from 'framer-motion';
+import { EventCardProps } from '../../interfaces/EventCardProps';
 
-function EventCard({ value }) {
-  console.log(value);
-
+function EventCard({ value }: EventCardProps) {
   return (
     <Box
       maxW={'40%'}
@@ -38,8 +37,6 @@ function EventCard({ value }) {
           duration: 0.5,
           ease: 'easeInOut',
           times: [0, 0.2, 0.5, 0.8, 0],
-          // loop: Infinity,
-          // repeatDelay: 1
         }}
         whileHover={{
           scale: 1.1,

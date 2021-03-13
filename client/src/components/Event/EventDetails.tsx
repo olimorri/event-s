@@ -16,7 +16,7 @@ export default function EventDetails({
 }: EventDetailsProps) {
   let { id }: { id: string } = useParams();
   const event: Event | undefined = events.find((el: Event) => el._id === id);
-  const handleClick = (e: MouseEvent) => {
+  const attend = (e: MouseEvent) => {
     e.preventDefault();
     signUpDown('up', id);
   };
@@ -78,7 +78,7 @@ export default function EventDetails({
                 user.host ? null : !user.eventList.some(
                     (el: Event) => el._id === id,
                   ) ? (
-                  <Attend handleClick={handleClick} />
+                  <Attend attend={attend} />
                 ) : (
                   <Unattend unattend={unattend} />
                 )}

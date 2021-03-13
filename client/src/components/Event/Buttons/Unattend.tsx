@@ -12,11 +12,15 @@ import {
   ButtonGroup,
 } from '@chakra-ui/react';
 
-export default function Attend({ attend }: { attend: MouseEventHandler }) {
+export default function Unattend({
+  unattend,
+}: {
+  unattend: MouseEventHandler;
+}) {
   return (
     <Popover>
       <PopoverTrigger>
-        <Button w={'40%'}>Attend</Button>
+        <Button w={'40%'}>Unattend</Button>
       </PopoverTrigger>
       <Portal>
         <PopoverContent>
@@ -26,8 +30,8 @@ export default function Attend({ attend }: { attend: MouseEventHandler }) {
           <PopoverBody>
             <ButtonGroup size="sm">
               <Button variant="outline">Cancel</Button>
-              <Button onClick={attend} colorScheme="gray">
-                Attend
+              <Button onClick={unattend} colorScheme="gray">
+                Unattend
               </Button>
             </ButtonGroup>
           </PopoverBody>

@@ -1,6 +1,4 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
-
 import {
   Box,
   Flex,
@@ -25,8 +23,15 @@ import {
   ButtonGroup,
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
+import { User } from '../interfaces/User';
 
-export default function NavigationBar({ isAuthenticated, user }) {
+export default function NavigationBar({
+  isAuthenticated,
+  user,
+}: {
+  isAuthenticated: boolean;
+  user: User;
+}) {
   return (
     <>
       <Box bg={'custom.100'} px={4} boxShadow={'2xl'}>
@@ -63,7 +68,10 @@ export default function NavigationBar({ isAuthenticated, user }) {
                 variant={'link'}
                 cursor={'pointer'}
               >
-                <Avatar size={'sm'} src={isAuthenticated ? user.photo : null} />
+                <Avatar
+                  size={'sm'}
+                  src={isAuthenticated ? user.photo : undefined}
+                />
               </MenuButton>
               <MenuList>
                 {isAuthenticated ? (

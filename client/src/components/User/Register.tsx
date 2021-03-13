@@ -22,7 +22,6 @@ let firstName: string = '';
 let lastName: string = '';
 let photo: string = '';
 let host: boolean = false;
-
 let userTypeChosen: boolean = false;
 
 const initialState = {

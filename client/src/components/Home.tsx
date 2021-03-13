@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React from 'react';
 import './Home.css';
 import {
@@ -11,7 +10,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import sample from './intro.mp4';
+import sample from '../assets/intro.mp4';
 
 function Home() {
   return (
@@ -20,13 +19,7 @@ function Home() {
         <source src={sample} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <Flex
-        className="Content"
-        w={'full'}
-        // h={'100vh'}
-        // position="absolute"
-        // t={0}
-      >
+      <Flex className="Content" w={'full'}>
         <VStack
           className="SubContent"
           w={'full'}

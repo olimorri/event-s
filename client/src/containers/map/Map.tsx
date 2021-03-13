@@ -38,7 +38,7 @@ export default function Map({ filteredEvents }: { filteredEvents: Event[] }) {
     }) => {
       const newFeaturesList: Feature[] = [];
       filteredEvents.forEach((el: Event) => {
-        const id: string = el._id;
+        const id: string | undefined = el._id;
         const location: string[] = el.geolocation.split(',');
         const longitude: string = location[0];
         const latitude: string = location[1];
@@ -101,7 +101,7 @@ export default function Map({ filteredEvents }: { filteredEvents: Event[] }) {
       });
     });
     return () => map.remove();
-  }, [filteredEvents]);
+  }, [filteredEvents, lat, lng, zoom]);
 
   return (
     <div className="relative-container">

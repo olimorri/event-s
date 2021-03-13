@@ -11,5 +11,5 @@ export interface Event {
   photo: string;
   type: string;
   __v?: number;
-  _id: string;
+  _id?: string;
 }

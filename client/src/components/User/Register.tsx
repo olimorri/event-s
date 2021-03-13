@@ -15,6 +15,8 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { UserProps } from '../../interfaces/UserProps';
+import { User } from '../../interfaces/User';
+import { UserRequestError } from '../../interfaces/UserRequestError';
 
 let email: string = '';
 let password: string = '';
@@ -67,12 +69,21 @@ export default function Register(props: UserProps) {
     const { email, password, firstName, lastName, host, photo } = state;
     const user = { email, password, firstName, lastName, host, photo };
     const res = await UsersApiService.register(user);
-    if (res.error) {
-      alert(`${res.message}`);
-      setState(initialState);
-    } else {
+
+    function isUser(res: any): res is User {
+      return res.error === undefined;
+    }
+
+    function isUserRequest(res: any): res is UserRequestError {
+      return res.error !== undefined;
+    }
+
+    if (isUser(res)) {
       props.setIsAuthenticated(true);
       auth.login(() => props.history.push('/profile'));
+    } else if (isUserRequest(res)) {
+      alert(`${res.message}`);
+      setState(initialState);
     }
   };
 

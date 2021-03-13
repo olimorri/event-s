@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react';
 import {
-  Button, Popover, PopoverTrigger, Portal, PopoverContent,
-  PopoverArrow, PopoverHeader, PopoverCloseButton, PopoverBody, ButtonGroup,
+  Button,
+  Popover,
+  PopoverTrigger,
+  Portal,
+  PopoverContent,
+  PopoverArrow,
+  PopoverHeader,
+  PopoverCloseButton,
+  PopoverBody,
+  ButtonGroup,
 } from '@chakra-ui/react';
 
-
-export default function Attend ({ handleSubmit }) {
-
+export default function Unattend({
+  unattend,
+}: {
+  unattend: MouseEventHandler;
+}) {
   return (
     <Popover>
       <PopoverTrigger>
-        <Button w={'40%'}>Attend</Button>
+        <Button w={'40%'}>Unattend</Button>
       </PopoverTrigger>
       <Portal>
         <PopoverContent>
@@ -20,11 +30,13 @@ export default function Attend ({ handleSubmit }) {
           <PopoverBody>
             <ButtonGroup size="sm">
               <Button variant="outline">Cancel</Button>
-              <Button onClick={handleSubmit} colorScheme="gray">Attend</Button>
+              <Button onClick={unattend} colorScheme="gray">
+                Unattend
+              </Button>
             </ButtonGroup>
           </PopoverBody>
         </PopoverContent>
       </Portal>
     </Popover>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import { useParams } from 'react-router-dom';
 import Spinner from '../Handling/Spinner';
 import { Flex, Stack, Text, Image, Box, Wrap } from '@chakra-ui/react';
@@ -16,7 +16,7 @@ export default function EventDetails({
 }: EventDetailsProps) {
   let { id }: { id: string } = useParams();
   const event: Event | undefined = events.find((el: Event) => el._id === id);
-  const handleSubmit = (e: MouseEvent) => {
+  const attend = (e: MouseEvent) => {
     e.preventDefault();
     signUpDown('up', id);
   };
@@ -24,7 +24,7 @@ export default function EventDetails({
     e.preventDefault();
     signUpDown('down', id);
   };
-  console.log(user.eventList);
+
   return (
     <Flex
       minH={'100vh'}
@@ -78,7 +78,7 @@ export default function EventDetails({
                 user.host ? null : !user.eventList.some(
                     (el: Event) => el._id === id,
                   ) ? (
-                  <Attend handleSubmit={handleSubmit} />
+                  <Attend attend={attend} />
                 ) : (
                   <Unattend unattend={unattend} />
                 )}

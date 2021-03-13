@@ -13,7 +13,6 @@ export default function Events({ events }: { events: Event[] }) {
   const [filteredEvents, setFilteredEvents] = useState<Event[]>([...events]);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [checkBoxes, setCheckboxes] = useState<string[]>([]);
-  console.log(checkBoxes);
 
   function search(): void {
     if (!searchTerm && checkBoxes.length) return check();

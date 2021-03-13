@@ -18,6 +18,7 @@ import NewEvent from './containers/Events/NewEvent';
 import Footer from './components/Footer';
 import { AnimatePresence } from 'framer-motion';
 import { Event } from './interfaces/Event';
+import { User } from './interfaces/User';
 
 function App() {
   const [status, setStatus] = useState(false);
@@ -25,7 +26,26 @@ function App() {
   const [events, setEvents] = useState(initialEventState);
   const initialState = auth.isAuthenticated();
   const [isAuthenticated, setIsAuthenticated] = useState(initialState);
-  const [user, setUser] = useState({});
+
+  let email: string = '';
+  let password: string = '';
+  let firstName: string = '';
+  let eventList: Event[] = [];
+  let lastName: string = '';
+  let photo: string = '';
+  let host: boolean = false;
+  let userTypeChosen: boolean = false;
+
+  const initialUserState: User = {
+    email,
+    eventList,
+    firstName,
+    lastName,
+    password,
+    photo,
+    host,
+  };
+  const [user, setUser] = useState(initialUserState);
 
   useEffect(() => {
     EventsApiService.getEvents()

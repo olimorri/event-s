@@ -27,7 +27,7 @@ const login = (user: {}): Promise<User | UserRequestError> => {
     .catch((err) => console.log(err));
 };
 
-const profile = (): Promise<User | UserRequestError> => {
+const profile = (): Promise<User> => {
   return fetch(`${BASE_URL}/me`, {
     method: 'GET',
     credentials: 'include',

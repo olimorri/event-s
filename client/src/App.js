@@ -116,7 +116,7 @@ function App() {
               <Route
                 path="/events"
                 exact
-                render={() => <Events value={events} />}
+                render={() => <Events events={events} />}
               />
               <Route
                 path="/events/:id"

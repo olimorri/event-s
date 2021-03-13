@@ -12,11 +12,11 @@ import { Event } from '../../interfaces/Event';
 export default function Events({ events }: { events: Event[] }) {
   const [filteredEvents, setFilteredEvents] = useState<Event[]>([...events]);
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [checkBoxes, setCheckboxes] = useState<string[]>([]);
+  const [checkboxes, setCheckboxes] = useState<string[]>([]);
 
   function search(): void {
-    if (!searchTerm && checkBoxes.length) return check();
-    const searchEvents: Event[] = (checkBoxes.length
+    if (!searchTerm && checkboxes.length) return check();
+    const searchEvents: Event[] = (checkboxes.length
       ? filteredEvents
       : events
     ).filter(
@@ -27,27 +27,27 @@ export default function Events({ events }: { events: Event[] }) {
     setFilteredEvents(searchEvents);
   }
   function check(): void {
-    if (!checkBoxes.length && !searchTerm) return setFilteredEvents(events);
-    if (!checkBoxes.length && searchTerm) {
+    if (!checkboxes.length && !searchTerm) return setFilteredEvents(events);
+    if (!checkboxes.length && searchTerm) {
       search();
     } else {
-      const checkboxes: Event[] = (searchTerm
+      const checkedEvents: Event[] = (searchTerm
         ? filteredEvents
         : events
-      ).filter((event: Event) => checkBoxes.includes(event.type));
-      setFilteredEvents(checkboxes);
+      ).filter((event: Event) => checkboxes.includes(event.type));
+      setFilteredEvents(checkedEvents);
     }
   }
   useEffect((): void => {
-    if (!checkBoxes.length && !searchTerm) return setFilteredEvents(events);
-    if (checkBoxes.length && !searchTerm) {
+    if (!checkboxes.length && !searchTerm) return setFilteredEvents(events);
+    if (checkboxes.length && !searchTerm) {
       check();
     }
     search();
   }, [searchTerm]);
   useEffect(() => {
     check();
-  }, [checkBoxes]);
+  }, [checkboxes]);
 
   return (
     <Box
@@ -88,7 +88,7 @@ export default function Events({ events }: { events: Event[] }) {
             <Flex flex={1} paddingTop={0} p={8} justify={'center'}>
               <Stack spacing={6} w={'full'} maxW={'lg'}>
                 <SortBar
-                  checkBoxes={checkBoxes}
+                  checkboxes={checkboxes}
                   setCheckboxes={setCheckboxes}
                 />
                 <Map filteredEvents={filteredEvents} />

@@ -1,10 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { ChangeEvent } from 'react';
 import { Flex, Box, FormControl, Input } from '@chakra-ui/react';
 
-export default function SearchBar({ searchTerm, setSearchTerm }) {
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value.toLowerCase());
+export default function SearchBar({
+  searchTerm,
+  setSearchTerm,
+}: {
+  searchTerm: string;
+  setSearchTerm: Function;
+}) {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setSearchTerm(e.target.value.toLowerCase());
   };
 
   return (

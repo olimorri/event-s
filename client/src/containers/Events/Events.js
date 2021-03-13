@@ -77,14 +77,7 @@ export default function Events({ events }) {
           </Heading>
         </motion.div>
       </Flex>
-      <Stack
-        minH={'100vh'}
-        direction={{ base: 'column', md: 'row' }}
-        p={5}
-        // bgImage="url('https://res.cloudinary.com/dujun1hoe/image/upload/v1615228154/event-s/gradient-background-26046-26731-hd-wallpapers.jpg_cenrqe.png')"
-        // bgSize="cover"
-        // backgroundRepeat="no-repeat"
-      >
+      <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} p={5}>
         {false ? (
           <Spinner />
         ) : (

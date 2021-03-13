@@ -7,35 +7,39 @@ import Map from '../map/Map';
 import Spinner from '../../components/Handling/Spinner';
 import { Box, Flex, Text, Stack, Heading } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { Event } from '../../interfaces/Event';
 
-export default function Events({ events }) {
-  const [filteredEvents, setFilteredEvents] = useState([...events]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [checkBoxes, setCheckboxes] = useState([]);
+export default function Events({ events }: { events: Event[] }) {
+  const [filteredEvents, setFilteredEvents] = useState<Event[]>([...events]);
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [checkBoxes, setCheckboxes] = useState<string[]>([]);
+  console.log(checkBoxes);
 
-  function search() {
+  function search(): void {
     if (!searchTerm && checkBoxes.length) return check();
-    const events = checkBoxes.length ? filteredEvents : events;
-    const search = events.filter(
-      (event) =>
+    const searchEvents: Event[] = (checkBoxes.length
+      ? filteredEvents
+      : events
+    ).filter(
+      (event: Event) =>
         event.name.toLowerCase().includes(searchTerm) ||
         event.description.toLowerCase().includes(searchTerm),
     );
-    setFilteredEvents(search);
+    setFilteredEvents(searchEvents);
   }
-  function check() {
+  function check(): void {
     if (!checkBoxes.length && !searchTerm) return setFilteredEvents(events);
     if (!checkBoxes.length && searchTerm) {
       search();
     } else {
-      const events = searchTerm ? filteredEvents : events;
-      const checkboxes = events.filter((event) =>
-        checkBoxes.includes(event.type),
-      );
+      const checkboxes: Event[] = (searchTerm
+        ? filteredEvents
+        : events
+      ).filter((event: Event) => checkBoxes.includes(event.type));
       setFilteredEvents(checkboxes);
     }
   }
-  useEffect(() => {
+  useEffect((): void => {
     if (!checkBoxes.length && !searchTerm) return setFilteredEvents(events);
     if (checkBoxes.length && !searchTerm) {
       check();

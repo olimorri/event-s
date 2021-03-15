@@ -1,7 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { Schema, model } = require('mongoose');
+import { Schema, model } from 'mongoose';
+import { IUser } from '../interfaces/User';
 
-const userSchema = new Schema({
+const userSchema: Schema = new Schema({
   email: {
     type: String,
     required: true,
@@ -37,4 +37,4 @@ const userSchema = new Schema({
   ],
 });
 
-module.exports = model('User', userSchema);
+export default model<IUser>('User', userSchema);

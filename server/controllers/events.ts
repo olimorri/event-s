@@ -32,7 +32,6 @@ exports.postEvent = async (req: Request, res: Response) => {
 
     const { location }: { location: string } = req.body;
     const getGeoLocation = await axios.get(
-      // TODO: need to create a new interface here
       `http://api.postcodes.io/postcodes/${location}`,
     );
     const geolocation = `${getGeoLocation.data.result.longitude},${getGeoLocation.data.result.latitude}`;

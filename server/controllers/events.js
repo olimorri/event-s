@@ -8,10 +8,9 @@ exports.getEvents = async (req, res) => {
     const events = await Events.find();
     res.status(200);
     res.send(events);
-  } catch (O_O) {
-    console.error('GET EVENTS: ', error);
+  } catch (err) {
     res.status(500);
-    res.send(O_O);
+    res.send(err);
   }
 };
 exports.getSingleEvent = async (req, res) => {

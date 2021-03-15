@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const bcrypt = require('bcrypt');
-const User = require('../models/users');
+const User = require('../models/users'); //when we change to TS we might not need default
 
 const create = async (req, res) => {
   const { email, password } = req.body;
-  const user = await User.findOne({ email: email });
+  const user = await User.find({ email: email });
   if (user)
     return res
       .status(409)
@@ -26,12 +27,15 @@ const create = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
+    console.log(User, 'USER');
     const user = await User.findOne({ email: email });
+    console.log(user, 'USER');
     const validatedPass = await bcrypt.compare(password, user.password);
     if (!validatedPass) throw new Error();
     req.session.uid = user._id;
     res.status(200).send(user);
-  } catch (error) {
+  } catch (err) {
+    console.log(err);
     res
       .status(401)
       .send({ error: '401', message: 'Username or password is incorrect' });

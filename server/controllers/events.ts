@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Request, Response } from 'express';
 import { IEventList } from '../interfaces/EventList';
 
-const getEvents = async (req: Request, res: Response) => {
+const getEvents = async (req: Request, res: Response): Promise<void> => {
   try {
     const selectedEvents: IEventList[] = await Event.find();
     res.status(200);
@@ -14,7 +14,7 @@ const getEvents = async (req: Request, res: Response) => {
     res.send(err);
   }
 };
-const getSingleEvent = async (req: Request, res: Response) => {
+const getSingleEvent = async (req: Request, res: Response): Promise<void> => {
   try {
     const id: string = req.params.id;
     const selectedEvent: IEventList[] = await Event.find({ _id: id });
@@ -27,7 +27,7 @@ const getSingleEvent = async (req: Request, res: Response) => {
   }
 };
 
-const postEvent = async (req: Request, res: Response) => {
+const postEvent = async (req: Request, res: Response): Promise<void> => {
   try {
     const { _id }: { _id: string } = req.body.user;
 
@@ -54,7 +54,7 @@ const postEvent = async (req: Request, res: Response) => {
   }
 };
 
-const deleteEvent = async (req: Request, res: Response) => {
+const deleteEvent = async (req: Request, res: Response): Promise<void> => {
   try {
     const id: string = req.params.id;
     const selectedEvent: IEventList | null = await Event.findOne({ _id: id });
@@ -85,7 +85,7 @@ const deleteEvent = async (req: Request, res: Response) => {
   }
 };
 
-const updateEvent = async (req: Request, res: Response) => {
+const updateEvent = async (req: Request, res: Response): Promise<void> => {
   try {
     const id: string = req.params.id;
     const selectedEvent: IEventList | null = await Event.findByIdAndUpdate(
@@ -102,10 +102,10 @@ const updateEvent = async (req: Request, res: Response) => {
   }
 };
 
-const attendEvent = async (req: Request, res: Response) => {
+const attendEvent = async (req: Request, res: Response): Promise<void> => {
   try {
     const id: string = req.params.id;
-    const _id: string = req.body.user._id; //TODO: check this with console log
+    const _id: string = req.body.user._id;
     const addToEvent = await Event.findByIdAndUpdate(
       id,
       { $push: { list: _id }, $inc: { attendees: 1 } },
@@ -123,10 +123,11 @@ const attendEvent = async (req: Request, res: Response) => {
     res.send({ err, message: 'Could not assign user to event' });
   }
 };
-const unattendEvent = async (req: Request, res: Response) => {
+const unattendEvent = async (req: Request, res: Response): Promise<void> => {
   try {
     const id: any = req.params.id;
-    const _id: any = req.body.user;
+    const _id: any = req.body.user._id;
+
     const deleteFromEvent: IEventList | null = await Event.findByIdAndUpdate(
       id,
       { $pull: { list: _id }, $inc: { attendees: -1 } },

@@ -55,4 +55,4 @@ const eventSchema: Schema = new Schema({
 
 const Event = model<IEventList>('Events', eventSchema);
 
-module.exports = Event;
+export default Event;

@@ -27,7 +27,8 @@ const create = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email: email });
+    const user = await User.default.findOne({ email: email });
+    //used default here
     const validatedPass = await bcrypt.compare(password, user.password);
     if (!validatedPass) throw new Error();
     req.session.uid = user._id;
@@ -42,9 +43,12 @@ const login = async (req, res) => {
 
 const profile = async (req, res) => {
   try {
-    const populatedUser = await User.findOne({ _id: req.user._id }).populate(
-      'eventList',
-    );
+    const populatedUser = await User.default
+      .findOne({ _id: req.user._id })
+      .populate(
+        //used DEFAULT HERE
+        'eventList',
+      );
     const {
       _id,
       firstName,
@@ -66,8 +70,8 @@ const profile = async (req, res) => {
       eventList,
     };
     res.status(200).send(user);
-  } catch (error) {
-    res.status(404).send({ error, message: 'User not found' });
+  } catch (err) {
+    res.status(404).send(err);
   }
 };
 
@@ -87,7 +91,10 @@ const logout = (req, res) => {
 const getHostDetails = async (req, res) => {
   try {
     const { id } = req.params;
-    const populatedUser = await User.findOne({ _id: id }).populate('eventList');
+    const populatedUser = await User.default
+      .findOne({ _id: id })
+      .populate('eventList');
+    //USED DEFAULT HERE
     const {
       _id,
       firstName,

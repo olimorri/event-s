@@ -13,5 +13,5 @@ export interface IEventList extends Document {
   type: string;
   description?: string;
   owner: string;
-  list?: IUser['_id'];
+  list?: IUser['_id'][];
 }

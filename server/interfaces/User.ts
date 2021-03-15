@@ -10,5 +10,5 @@ export interface IUser extends Document {
   photo?: string;
   about?: string;
   location?: string;
-  eventList?: IEventList['_id'];
+  eventList?: IEventList['_id'][];
 }

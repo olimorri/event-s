@@ -1,8 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const router = require('express').Router();
-const Events = require('./controllers/events');
-const Users = require('./controllers/users');
-const authMiddleware = require('./middlewares/auth');
+// const router = require('express').Router();
+import express from 'express';
+import Events from './controllers/events';
+import Users from './controllers/users';
+import authMiddleware from './middlewares/auth';
+
+const router = express.Router();
 
 router.get('/events', Events.getEvents);
 router.get('/events/:id', Events.getSingleEvent);

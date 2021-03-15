@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const mongoose = require('mongoose');
-const { dbName, host, dbPort } = require('../config');
+const config = require('../config');
 
 module.exports = mongoose.connect(
   `mongodb://${host}:${dbPort}/${dbName}`,
+  `mongodb://${config.host}:${config.dbPort}/${config.dbName}`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -14,6 +16,7 @@ module.exports = mongoose.connect(
       console.log(`😞 Sorry, something went wrong! ${err}`); // eslint-disable-line no-console
     } else {
       console.log(`🦆 Database (sessions) connected @ port ${dbPort}!`); // eslint-disable-line no-console
+      console.log(`🦆 Database (sessions) connected @ port ${config.dbPort}!`); // eslint-disable-line no-console
     }
   },
 );

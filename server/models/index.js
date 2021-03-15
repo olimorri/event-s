@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const mongoose = require('mongoose');
 const config = require('../config');
-// import config from '../config';
 
 module.exports = mongoose.connect(
   `mongodb://${config.host}:${config.dbPort}/${config.dbName}`,

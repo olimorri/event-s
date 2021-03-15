@@ -45,7 +45,7 @@ app.get('*', (req, res) => {
       .__________________________.
       | .___________________. |==|
       | |     I'm ALIVE     | |  |
-      | |                   | |  |
+      | |    ...SOMEHOW     | |  |
       | |                   | |  |
       | |                   | |  |
       | |                   | |  |
@@ -60,7 +60,7 @@ app.get('*', (req, res) => {
 
     `);
     });
-  } catch (O_O) {
-    console.log(O_O);
+  } catch (err) {
+    console.log(err);
   }
 })();

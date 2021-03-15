@@ -3,6 +3,7 @@ import User from '../models/users';
 import axios from 'axios';
 import { Request, Response } from 'express';
 import { IEventList } from '../interfaces/EventList';
+import { Schema, ObjectId, Types } from 'mongoose';
 
 const getEvents = async (req: Request, res: Response): Promise<void> => {
   try {
@@ -125,17 +126,17 @@ const attendEvent = async (req: Request, res: Response): Promise<void> => {
 };
 const unattendEvent = async (req: Request, res: Response): Promise<void> => {
   try {
-    const id: any = req.params.id;
-    const _id: any = req.body.user._id;
+    const _id: string = req.body.user._id;
+    const id: string = req.params.id;
 
     const deleteFromEvent: IEventList | null = await Event.findByIdAndUpdate(
       id,
-      { $pull: { list: _id }, $inc: { attendees: -1 } },
+      { $pull: { list: Types.ObjectId(_id) }, $inc: { attendees: -1 } },
       { new: true },
     );
     await User.findByIdAndUpdate(
       _id,
-      { $pull: { eventList: id } },
+      { $pull: { eventList: Types.ObjectId(id) } },
       { new: true },
     );
     res.status(201);

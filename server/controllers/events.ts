@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Request, Response } from 'express';
 import { IEventList } from '../interfaces/EventList';
 
-exports.getEvents = async (req: Request, res: Response) => {
+const getEvents = async (req: Request, res: Response) => {
   try {
     const selectedEvents: IEventList[] = await Event.find();
     res.status(200);
@@ -14,7 +14,7 @@ exports.getEvents = async (req: Request, res: Response) => {
     res.send(err);
   }
 };
-exports.getSingleEvent = async (req: Request, res: Response) => {
+const getSingleEvent = async (req: Request, res: Response) => {
   try {
     const id: string = req.params.id;
     const selectedEvent: IEventList[] = await Event.find({ _id: id });
@@ -26,7 +26,8 @@ exports.getSingleEvent = async (req: Request, res: Response) => {
     res.send(err);
   }
 };
-exports.postEvent = async (req: Request, res: Response) => {
+
+const postEvent = async (req: Request, res: Response) => {
   try {
     const { _id }: { _id: string } = req.body.user;
 
@@ -53,7 +54,7 @@ exports.postEvent = async (req: Request, res: Response) => {
   }
 };
 
-exports.deleteEvent = async (req: Request, res: Response) => {
+const deleteEvent = async (req: Request, res: Response) => {
   try {
     const id: string = req.params.id;
     const selectedEvent: IEventList | null = await Event.findOne({ _id: id });
@@ -84,7 +85,7 @@ exports.deleteEvent = async (req: Request, res: Response) => {
   }
 };
 
-exports.updateEvent = async (req: Request, res: Response) => {
+const updateEvent = async (req: Request, res: Response) => {
   try {
     const id: string = req.params.id;
     const selectedEvent: IEventList | null = await Event.findByIdAndUpdate(
@@ -101,7 +102,7 @@ exports.updateEvent = async (req: Request, res: Response) => {
   }
 };
 
-exports.attendEvent = async (req: Request, res: Response) => {
+const attendEvent = async (req: Request, res: Response) => {
   try {
     const id: string = req.params.id;
     const _id: string = req.body.user._id; //TODO: check this with console log
@@ -122,7 +123,7 @@ exports.attendEvent = async (req: Request, res: Response) => {
     res.send({ err, message: 'Could not assign user to event' });
   }
 };
-exports.unattendEvent = async (req: Request, res: Response) => {
+const unattendEvent = async (req: Request, res: Response) => {
   try {
     const id: any = req.params.id;
     const _id: any = req.body.user;
@@ -141,4 +142,14 @@ exports.unattendEvent = async (req: Request, res: Response) => {
   } catch (err) {
     res.status(404).send({ err, message: 'Could not assign user to event' });
   }
+};
+
+export default {
+  getEvents,
+  getSingleEvent,
+  postEvent,
+  deleteEvent,
+  updateEvent,
+  attendEvent,
+  unattendEvent,
 };

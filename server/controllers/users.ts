@@ -53,7 +53,7 @@ const login = async (req: Request, res: Response) => {
 const profile = async (req: any, res: Response) => {
   try {
     const populatedUser: IUser | null = await User.findOne({
-      _id: req.user._id,
+      _id: req.body.user._id,
     }).populate(
       //used DEFAULT HERE
       'eventList',
@@ -159,7 +159,7 @@ const deleteUser = async (req: Request, res: Response) => {
   }
 };
 
-module.exports = {
+export default {
   create,
   login,
   profile,

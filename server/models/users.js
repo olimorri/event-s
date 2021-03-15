@@ -1,6 +1,7 @@
-const { Schema, model} = require('mongoose');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { Schema, model } = require('mongoose');
 
-const userSchema = new Schema ({
+const userSchema = new Schema({
   email: {
     type: String,
     required: true,
@@ -28,9 +29,12 @@ const userSchema = new Schema ({
   location: {
     type: String,
   },
-  eventList: [{
-    type: Schema.Types.ObjectId, ref: 'Events',
-  }],
+  eventList: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Events',
+    },
+  ],
 });
 
 module.exports = model('User', userSchema);

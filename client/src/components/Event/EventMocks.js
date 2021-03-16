@@ -137,7 +137,7 @@ const event = {
   geolocation: '0.261773,51.116312',
   limit: 2,
   list: ['604a36891b95d669d99ebe2e'],
-  location: 'tn25hs',
+  location: 'SE10 0DX',
   name: 'test event',
   owner: '604b5c00ca29f24f751f492c',
   photo: 'https://source.unsplash.com/random/300x300',

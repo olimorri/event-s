@@ -1,5 +1,5 @@
 import { useState } from 'react';
-//import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import UsersApiService from '../../services/UsersApiService';
 import auth from '../../utils/auth';
 import {
@@ -137,11 +137,11 @@ export default function Login(props: UserProps) {
                   Sign in
                 </Button>
               </Stack>
-              {/* <RouterLink to="/register">
+              <RouterLink to="/register">
                 <Text align={'end'} color="blue.400">
                   Create new account
                 </Text>
-              </RouterLink> */}
+              </RouterLink>
             </Stack>
           </Box>
         </Stack>

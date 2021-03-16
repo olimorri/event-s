@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1rpqb1v"
+  >
+    <div
+      class="chakra-stack css-rfhkiz"
+    >
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <div
+          class="chakra-stack css-1xbaot1"
+        >
+          <h2
+            class="chakra-heading css-tyi3eh"
+          >
+            Create new account
+          </h2>
+        </div>
+        <div
+          class="css-3hziw7"
+        >
+          <div
+            class="chakra-stack css-ppbuf4"
+          >
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-uvho5g"
+                for="first_name"
+                id="first_name-label"
+              >
+                First name
+              </label>
+              <input
+                aria-describedby="first_name-helptext"
+                class="chakra-input css-0"
+                id="first_name"
+                name="firstName"
+                placeholder="First Name"
+                value=""
+              />
+              <label
+                class="chakra-form__label css-uvho5g"
+                for="first_name"
+                id="first_name-label"
+              >
+                Last name
+              </label>
+              <input
+                aria-describedby="first_name-helptext"
+                class="chakra-input css-0"
+                id="last_name"
+                name="lastName"
+                placeholder="Last Name"
+                value=""
+              />
+              <label
+                class="chakra-form__label css-uvho5g"
+                for="first_name"
+                id="first_name-label"
+              >
+                Email address
+              </label>
+              <input
+                aria-describedby="first_name-helptext"
+                class="chakra-input css-0"
+                id="email"
+                name="email"
+                placeholder="name@email.com"
+                type="email"
+                value=""
+              />
+              <div
+                class="chakra-form__helper-text css-0"
+                id="first_name-helptext"
+              >
+                I'll never share your email. I don't know how!
+              </div>
+              <label
+                class="chakra-form__label css-uvho5g"
+                for="first_name"
+                id="first_name-label"
+              >
+                Password
+              </label>
+              <input
+                aria-describedby="first_name-helptext"
+                class="chakra-input css-0"
+                id="first_name"
+                name="password"
+                placeholder="Choose a password"
+                type="password"
+                value=""
+              />
+              <label
+                class="chakra-form__label css-uvho5g"
+                for="first_name"
+                id="first_name-label"
+              >
+                Photo
+              </label>
+              <input
+                aria-describedby="first_name-helptext"
+                class="chakra-input css-0"
+                id="photo"
+                name="photo"
+                placeholder="Insert a link to your event photo"
+                value=""
+              />
+            </div>
+            <div
+              class="chakra-stack css-1re04b2"
+            >
+              <div
+                class="chakra-form-control css-1kxonj9"
+                role="group"
+              >
+                <label
+                  class="chakra-form__label css-uvho5g"
+                  for="type"
+                  id="type-label"
+                >
+                  Hosting or Attending?
+                </label>
+                <div
+                  class="chakra-select__wrapper css-42b2qy"
+                >
+                  <select
+                    class="chakra-select css-1p4gbel"
+                    id="type"
+                    name="host"
+                  >
+                    <option>
+                      Guest
+                    </option>
+                    <option
+                      selected=""
+                    >
+                      Host
+                    </option>
+                  </select>
+                  <div
+                    class="chakra-select__icon-wrapper css-162mkon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="chakra-select__icon"
+                      focusable="false"
+                      role="presentation"
+                      style="width: 1em; height: 1em; color: currentColor;"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="chakra-button css-1fvu2nh"
+                type="button"
+              >
+                Sign up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -189,11 +189,11 @@ export default function Register(props: UserProps) {
               </FormControl>
               <Stack spacing={10}>
                 <FormControl id="type">
-                  <FormLabel>Type of user</FormLabel>
+                  <FormLabel>Hosting or Attending?</FormLabel>
                   <Select
                     name="host"
                     onChange={handleUserSelection}
-                    placeholder="Hosting or attending?"
+                    defaultValue="Host"
                   >
                     <option>Guest</option>
                     <option>Host</option>

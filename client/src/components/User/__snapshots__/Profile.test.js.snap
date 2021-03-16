@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-10klw3m"
+  >
+    <div
+      class="chakra-stack css-15e4fml"
+    >
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <div
+          class="css-jckc1i"
+        >
+          <div
+            class="css-2499gv"
+            spacing="0px"
+          >
+            <div
+              class="css-13zcs50"
+            >
+              <div
+                style="opacity: 0; transform: translateX(-100vw) translateZ(0);"
+              >
+                <img
+                  alt=""
+                  class="chakra-image__placeholder css-1c8jk1n"
+                />
+              </div>
+            </div>
+            <div
+              class="css-1n2y2el"
+            >
+              <h2
+                align="center"
+                class="chakra-heading css-0"
+              >
+                Welcome 
+              </h2>
+              <div
+                style="opacity: 0; transform: scale(0) translateZ(0);"
+              >
+                <h2
+                  align="center"
+                  class="chakra-heading css-0"
+                >
+                   Bob Bobson
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-abirks"
+            dir="row"
+          >
+            <div
+              style="opacity: 0; transform: translateX(-100vw) translateZ(0);"
+            >
+              <div
+                align="center"
+                class="css-0"
+              >
+                <img
+                  class="chakra-image__placeholder css-0"
+                />
+                <p
+                  class="chakra-text css-0"
+                >
+                  User type:
+                </p>
+                <p
+                  class="chakra-text css-1n9r2z"
+                >
+                  Host
+                </p>
+              </div>
+            </div>
+            <div
+              style="opacity: 0; transform: translateX(-100vw) translateZ(0);"
+            >
+              <div
+                align="center"
+                class="css-0"
+              >
+                <img
+                  class="chakra-image__placeholder css-0"
+                />
+                <p
+                  class="chakra-text css-0"
+                >
+                  Number of events:
+                </p>
+                <p
+                  class="chakra-text css-1n9r2z"
+                >
+                  2
+                </p>
+              </div>
+            </div>
+          </div>
+          <p
+            class="chakra-text css-xi606m"
+            justify="center"
+          >
+            Current events:
+          </p>
+          <div
+            class="chakra-wrap css-tiophl"
+          >
+            <ul
+              class="chakra-wrap__list css-1vhqsv9"
+            >
+              <div
+                style="opacity: 0; transform: scale(0) translateZ(0);"
+              >
+                <a
+                  href="/events/604b5c00ca29f24f751f492c"
+                >
+                  <div
+                    class="css-1yf3uup"
+                  >
+                    <button
+                      class="chakra-button css-19k6s7r"
+                      type="button"
+                    >
+                      test event 1
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div
+                style="opacity: 0; transform: scale(0) translateZ(0);"
+              >
+                <a
+                  href="/events/604b5c00ca29f24f751f492c"
+                >
+                  <div
+                    class="css-1yf3uup"
+                  >
+                    <button
+                      class="chakra-button css-19k6s7r"
+                      type="button"
+                    >
+                      test event 2
+                    </button>
+                  </div>
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="chakra-wrap css-4hd7e7"
+  >
+    <ul
+      class="chakra-wrap__list css-1mxfdxb"
+    >
+      <div
+        class="css-ujugy8"
+      >
+        <div>
+          <a
+            href="/events/604ce151b61ff67613b5b6d9"
+          >
+            <div
+              class="css-u6v8er"
+            >
+              <div
+                class="css-1bj41hx"
+              >
+                <img
+                  class="chakra-image__placeholder css-clx8i5"
+                />
+              </div>
+              <div
+                class="chakra-stack css-1pifhv5"
+              >
+                <h2
+                  class="chakra-heading css-y9ag95"
+                >
+                  Test Event 2
+                </h2>
+                <p
+                  class="chakra-text css-ax9bdp"
+                >
+                  SP4 7DE
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  Mar 16th 21
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="css-ujugy8"
+      >
+        <div>
+          <a
+            href="/events/604ce171b61ff67613b5b6da"
+          >
+            <div
+              class="css-u6v8er"
+            >
+              <div
+                class="css-1bj41hx"
+              >
+                <img
+                  class="chakra-image__placeholder css-clx8i5"
+                />
+              </div>
+              <div
+                class="chakra-stack css-1pifhv5"
+              >
+                <h2
+                  class="chakra-heading css-y9ag95"
+                >
+                  Test Event 3
+                </h2>
+                <p
+                  class="chakra-text css-ax9bdp"
+                >
+                  L4 0TH
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  Mar 20th 21
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="css-ujugy8"
+      >
+        <div>
+          <a
+            href="/events/604ce3d6b61ff67613b5b6db"
+          >
+            <div
+              class="css-u6v8er"
+            >
+              <div
+                class="css-1bj41hx"
+              >
+                <img
+                  class="chakra-image__placeholder css-clx8i5"
+                />
+              </div>
+              <div
+                class="chakra-stack css-1pifhv5"
+              >
+                <h2
+                  class="chakra-heading css-y9ag95"
+                >
+                  Test Event 4
+                </h2>
+                <p
+                  class="chakra-text css-ax9bdp"
+                >
+                  SW1A 2AA
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  Apr 3rd 21
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="css-ujugy8"
+      >
+        <div>
+          <a
+            href="/events/604f8bd4cdb45af7cd1ca265"
+          >
+            <div
+              class="css-u6v8er"
+            >
+              <div
+                class="css-1bj41hx"
+              >
+                <img
+                  class="chakra-image__placeholder css-clx8i5"
+                />
+              </div>
+              <div
+                class="chakra-stack css-1pifhv5"
+              >
+                <h2
+                  class="chakra-heading css-y9ag95"
+                >
+                  Test Event 5
+                </h2>
+                <p
+                  class="chakra-text css-ax9bdp"
+                >
+                  E20 2ST
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  Mar 31st 21
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="css-ujugy8"
+      >
+        <div>
+          <a
+            href="/events/604f8c11cdb45af7cd1ca266"
+          >
+            <div
+              class="css-u6v8er"
+            >
+              <div
+                class="css-1bj41hx"
+              >
+                <img
+                  class="chakra-image__placeholder css-clx8i5"
+                />
+              </div>
+              <div
+                class="chakra-stack css-1pifhv5"
+              >
+                <h2
+                  class="chakra-heading css-y9ag95"
+                >
+                  Test Event 6
+                </h2>
+                <p
+                  class="chakra-text css-ax9bdp"
+                >
+                  EC4M 8AE
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  Mar 28th 21
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="css-ujugy8"
+      >
+        <div>
+          <a
+            href="/events/604f8c49cdb45af7cd1ca267"
+          >
+            <div
+              class="css-u6v8er"
+            >
+              <div
+                class="css-1bj41hx"
+              >
+                <img
+                  class="chakra-image__placeholder css-clx8i5"
+                />
+              </div>
+              <div
+                class="chakra-stack css-1pifhv5"
+              >
+                <h2
+                  class="chakra-heading css-y9ag95"
+                >
+                  Test Event 7
+                </h2>
+                <p
+                  class="chakra-text css-ax9bdp"
+                >
+                  EC3N 4AB
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  Mar 26th 21
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="css-ujugy8"
+      >
+        <div>
+          <a
+            href="/events/604fa49085cdd6032dfdf5e0"
+          >
+            <div
+              class="css-u6v8er"
+            >
+              <div
+                class="css-1bj41hx"
+              >
+                <img
+                  class="chakra-image__placeholder css-clx8i5"
+                />
+              </div>
+              <div
+                class="chakra-stack css-1pifhv5"
+              >
+                <h2
+                  class="chakra-heading css-y9ag95"
+                >
+                  Test Event 8
+                </h2>
+                <p
+                  class="chakra-text css-ax9bdp"
+                >
+                  SE10 0DX
+                </p>
+                <p
+                  class="chakra-text css-0"
+                >
+                  Mar 31st 21
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

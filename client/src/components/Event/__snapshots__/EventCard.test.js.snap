@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ujugy8"
+  >
+    <div>
+      <a
+        href="/events/undefined"
+      >
+        <div
+          class="css-u6v8er"
+        >
+          <div
+            class="css-1bj41hx"
+          >
+            <img
+              class="chakra-image__placeholder css-clx8i5"
+            />
+          </div>
+          <div
+            class="chakra-stack css-1pifhv5"
+          >
+            <h2
+              class="chakra-heading css-y9ag95"
+            >
+              test event
+            </h2>
+            <p
+              class="chakra-text css-ax9bdp"
+            >
+              tn25hs
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Mar 23rd 21
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

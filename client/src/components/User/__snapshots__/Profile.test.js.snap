@@ -95,7 +95,7 @@ exports[`Snapshot should take a snapshot 1`] = `
                 <p
                   class="chakra-text css-1n9r2z"
                 >
-                  2
+                  8
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ exports[`Snapshot should take a snapshot 1`] = `
                 style="opacity: 0; transform: scale(0) translateZ(0);"
               >
                 <a
-                  href="/events/604b5c00ca29f24f751f492c"
+                  href="/events/604a268300da7a8522af8b23"
                 >
                   <div
                     class="css-1yf3uup"
@@ -125,7 +125,7 @@ exports[`Snapshot should take a snapshot 1`] = `
                       class="chakra-button css-19k6s7r"
                       type="button"
                     >
-                      test event 1
+                      Test Event 1
                     </button>
                   </div>
                 </a>
@@ -134,7 +134,7 @@ exports[`Snapshot should take a snapshot 1`] = `
                 style="opacity: 0; transform: scale(0) translateZ(0);"
               >
                 <a
-                  href="/events/604b5c00ca29f24f751f492c"
+                  href="/events/604ce151b61ff67613b5b6d9"
                 >
                   <div
                     class="css-1yf3uup"
@@ -143,7 +143,115 @@ exports[`Snapshot should take a snapshot 1`] = `
                       class="chakra-button css-19k6s7r"
                       type="button"
                     >
-                      test event 2
+                      Test Event 2
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div
+                style="opacity: 0; transform: scale(0) translateZ(0);"
+              >
+                <a
+                  href="/events/604ce171b61ff67613b5b6da"
+                >
+                  <div
+                    class="css-1yf3uup"
+                  >
+                    <button
+                      class="chakra-button css-19k6s7r"
+                      type="button"
+                    >
+                      Test Event 3
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div
+                style="opacity: 0; transform: scale(0) translateZ(0);"
+              >
+                <a
+                  href="/events/604ce3d6b61ff67613b5b6db"
+                >
+                  <div
+                    class="css-1yf3uup"
+                  >
+                    <button
+                      class="chakra-button css-19k6s7r"
+                      type="button"
+                    >
+                      Test Event 4
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div
+                style="opacity: 0; transform: scale(0) translateZ(0);"
+              >
+                <a
+                  href="/events/604f8bd4cdb45af7cd1ca265"
+                >
+                  <div
+                    class="css-1yf3uup"
+                  >
+                    <button
+                      class="chakra-button css-19k6s7r"
+                      type="button"
+                    >
+                      Test Event 5
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div
+                style="opacity: 0; transform: scale(0) translateZ(0);"
+              >
+                <a
+                  href="/events/604f8c11cdb45af7cd1ca266"
+                >
+                  <div
+                    class="css-1yf3uup"
+                  >
+                    <button
+                      class="chakra-button css-19k6s7r"
+                      type="button"
+                    >
+                      Test Event 6
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div
+                style="opacity: 0; transform: scale(0) translateZ(0);"
+              >
+                <a
+                  href="/events/604f8c49cdb45af7cd1ca267"
+                >
+                  <div
+                    class="css-1yf3uup"
+                  >
+                    <button
+                      class="chakra-button css-19k6s7r"
+                      type="button"
+                    >
+                      Test Event 7
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div
+                style="opacity: 0; transform: scale(0) translateZ(0);"
+              >
+                <a
+                  href="/events/604fa49085cdd6032dfdf5e0"
+                >
+                  <div
+                    class="css-1yf3uup"
+                  >
+                    <button
+                      class="chakra-button css-19k6s7r"
+                      type="button"
+                    >
+                      Test Event 8
                     </button>
                   </div>
                 </a>

@@ -1,19 +1,48 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import Login from './Login';
+import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
 
-// afterEach(cleanup);
+const history = createMemoryHistory();
 
-// describe('Snapshot', () => {
-// });
+const LoginTest = () => (
+  <Router history={history}>
+    <Login />
+  </Router>
+);
 
-// it('should take a snapshot', () => {
-//   const { asFragment } = render(<Login />);
+afterEach(cleanup);
 
-//   expect(asFragment(<Login />)).toMatchSnapshot();
-// });
+describe('Snapshot', () => {
+  it('should take a snapshot', () => {
+    const { asFragment } = render(<LoginTest />);
 
-test('renders Register component', () => {
-  render(<Login />);
-  const registerTitle = screen.getByText(/Sign in to your account/i);
-  expect(registerTitle).toBeInTheDocument();
+    expect(asFragment(<LoginTest />)).toMatchSnapshot();
+  });
+});
+
+describe('Unit Testing', () => {
+  test('renders Sign in component', () => {
+    render(<LoginTest />);
+    const registerTitle = screen.getByText(/Sign in to your account/i);
+    expect(registerTitle).toBeInTheDocument();
+  });
+
+  test('renders email address input', () => {
+    render(<LoginTest />);
+    const emailInput = screen.getByLabelText(/Email address/i);
+    expect(emailInput).toBeInTheDocument();
+  });
+
+  test('renders password input', () => {
+    render(<LoginTest />);
+    const emailInput = screen.getByLabelText(/Password/i);
+    expect(emailInput).toBeInTheDocument();
+  });
+
+  test('renders sign in button', () => {
+    render(<LoginTest />);
+    const signInBtn = screen.getByRole('button', { name: /sign in/i });
+    expect(signInBtn).toBeInTheDocument();
+  });
 });

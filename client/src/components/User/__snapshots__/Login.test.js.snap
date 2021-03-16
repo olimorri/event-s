@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-11cbxf6"
+  >
+    <div
+      style="opacity: 0; transform: translateX(-100vw) translateZ(0);"
+    >
+      <div
+        class="chakra-stack css-ffd652"
+      >
+        <div
+          class="chakra-stack css-1xbaot1"
+        >
+          <h2
+            class="chakra-heading css-tyi3eh"
+          >
+            Sign in to your account
+          </h2>
+        </div>
+        <div
+          class="css-3hziw7"
+        >
+          <div
+            class="chakra-stack css-ppbuf4"
+          >
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-uvho5g"
+                for="email"
+                id="email-label"
+              >
+                Email address
+              </label>
+              <input
+                class="chakra-input css-0"
+                id="email"
+                name="email"
+                placeholder="name@email.com"
+                type="email"
+                value=""
+              />
+            </div>
+            <div
+              class="chakra-stack css-1re04b2"
+            >
+              <div
+                class="chakra-form-control css-1kxonj9"
+                role="group"
+              >
+                <label
+                  class="chakra-form__label css-uvho5g"
+                  for="password"
+                  id="password-label"
+                >
+                  Password
+                </label>
+                <input
+                  class="chakra-input css-0"
+                  id="password"
+                  name="password"
+                  placeholder="Choose a password"
+                  type="password"
+                  value=""
+                />
+              </div>
+              <button
+                class="chakra-button css-1fvu2nh"
+                disabled=""
+                type="button"
+              >
+                Sign in
+              </button>
+            </div>
+            <a
+              href="/register"
+            >
+              <p
+                class="chakra-text css-1o69x4v"
+              >
+                Create new account
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

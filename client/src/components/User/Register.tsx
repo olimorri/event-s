@@ -193,7 +193,7 @@ export default function Register(props: UserProps) {
                   <Select
                     name="host"
                     onChange={handleUserSelection}
-                    defaultValue="Host"
+                    defaultValue="Guest"
                   >
                     <option>Guest</option>
                     <option>Host</option>

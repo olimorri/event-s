@@ -136,12 +136,12 @@ exports[`Snapshot should take a snapshot 1`] = `
                     id="type"
                     name="host"
                   >
-                    <option>
-                      Guest
-                    </option>
                     <option
                       selected=""
                     >
+                      Guest
+                    </option>
+                    <option>
                       Host
                     </option>
                   </select>

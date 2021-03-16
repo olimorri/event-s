@@ -1,4 +1,4 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import Register from './Register';
 
 afterEach(cleanup);
@@ -67,7 +67,5 @@ describe('Unit Testing', () => {
     expect(signUp).toBeInTheDocument();
   });
 });
-
-describe('Functionality Testing', () => {});
 
 // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#roles

@@ -2,19 +2,9 @@ import { render, cleanup, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter, Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import Profile from './Profile';
-import { events, event } from '../Event/EventMocks';
+import { user } from './UserMocks';
 
 afterEach(cleanup);
-
-const user = {
-  email: 'test@email.com',
-  eventList: events,
-  firstName: 'Bob',
-  lastName: 'Bobson',
-  host: true,
-  password: 'test',
-  photo: 'https://unsplash.com/photos/mEBOHfzuPHk',
-};
 
 describe('Snapshot', () => {
   it('should take a snapshot', () => {

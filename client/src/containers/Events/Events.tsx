@@ -93,7 +93,12 @@ export default function Events({ events }: { events: Event[] }) {
                 />
                 <Map filteredEvents={filteredEvents} />
                 <Text color={'black'} fontWeight="bold" align={'center'}>
-                  {filteredEvents.length} matching events
+                  {
+                    filteredEvents.filter(
+                      (event: Event) => event.date > new Date().toISOString(),
+                    ).length
+                  }{' '}
+                  matching events
                 </Text>
               </Stack>
             </Flex>

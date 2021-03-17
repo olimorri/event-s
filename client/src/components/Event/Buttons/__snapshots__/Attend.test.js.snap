@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should take a snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="popover-content-2"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    class="chakra-button css-17bcnl0"
+    id="popover-trigger-2"
+    type="button"
+  >
+    Attend
+  </button>
+</DocumentFragment>
+`;

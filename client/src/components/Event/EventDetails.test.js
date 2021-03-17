@@ -2,19 +2,12 @@ import {
   render,
   cleanup,
   screen,
-  waitForElementToBeRemoved,
-  queryByText,
-  findByText,
-  getByText,
-  wait,
   waitFor,
   configure,
 } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import EventDetails from './EventDetails';
 import { events, event } from './EventMocks';
-
-afterEach(cleanup);
 
 configure({
   asyncUtilTimeout: 5000,

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-0"
+  >
+    <div
+      class="chakra-form-control css-1kxonj9"
+      role="group"
+    >
+      <div
+        class="css-k008qs"
+      >
+        <div
+          class="chakra-form-control css-s5jkx7"
+          role="group"
+        >
+          <input
+            class="chakra-input css-1so4oux"
+            id="search"
+            name="search"
+            placeholder="Search for events"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

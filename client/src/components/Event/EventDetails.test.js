@@ -9,9 +9,9 @@ import { BrowserRouter } from 'react-router-dom';
 import EventDetails from './EventDetails';
 import { events, event } from './EventMocks';
 
-configure({
-  asyncUtilTimeout: 5000,
-});
+// configure({
+//   asyncUtilTimeout: 5000,
+// });
 
 const EventDetailsTest = () => (
   <BrowserRouter>

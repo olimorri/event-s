@@ -29,8 +29,14 @@ export default function Unattend({
           <PopoverCloseButton />
           <PopoverBody>
             <ButtonGroup size="sm">
-              <Button variant="outline">Cancel</Button>
-              <Button onClick={unattend} colorScheme="gray">
+              <Button variant="outline" id="cancel">
+                Cancel
+              </Button>
+              <Button
+                onClick={unattend}
+                colorScheme="gray"
+                id="confirm-unattend"
+              >
                 Unattend
               </Button>
             </ButtonGroup>

@@ -25,8 +25,10 @@ export default function Attend({ attend }: { attend: MouseEventHandler }) {
           <PopoverCloseButton />
           <PopoverBody>
             <ButtonGroup size="sm">
-              <Button variant="outline">Cancel</Button>
-              <Button onClick={attend} colorScheme="gray">
+              <Button variant="outline" id="cancel">
+                Cancel
+              </Button>
+              <Button onClick={attend} colorScheme="gray" id="confirm-attend">
                 Attend
               </Button>
             </ButtonGroup>

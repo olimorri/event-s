@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-7b5fol"
+    justify="center"
+  >
+    <div
+      class="chakra-form-control css-1kxonj9"
+      justify="center"
+      role="group"
+    >
+      <div
+        class="css-13jom7"
+      >
+        <div
+          class="chakra-accordion css-1cojizo"
+        >
+          <div
+            class="chakra-accordion__item css-1ncwuqs"
+          >
+            <h2>
+              <button
+                aria-controls="accordion-panel-1"
+                aria-expanded="false"
+                class="chakra-accordion__button css-evh648"
+                id="accordion-button-1"
+                type="button"
+              >
+                <div
+                  class="css-1nwj029"
+                >
+                  Filter
+                </div>
+              </button>
+            </h2>
+            <div
+              class="chakra-collapse"
+              style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+            >
+              <div
+                aria-labelledby="accordion-button-1"
+                class="chakra-accordion__panel css-b0qdn7"
+                id="accordion-panel-1"
+                role="region"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  Type:
+                </p>
+                <div
+                  class="chakra-wrap css-0"
+                >
+                  <ul
+                    class="chakra-wrap__list css-1s0qoc1"
+                  >
+                    <label
+                      class="chakra-checkbox css-1052anv"
+                    >
+                      <input
+                        class="chakra-checkbox__input"
+                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                        type="checkbox"
+                        value="Food"
+                      />
+                      <span
+                        aria-hidden="true"
+                        class="chakra-checkbox__control css-dnty2r"
+                      />
+                      <span
+                        class="chakra-checkbox__label css-1oeb2oe"
+                      >
+                        Food
+                      </span>
+                    </label>
+                    <label
+                      class="chakra-checkbox css-1052anv"
+                    >
+                      <input
+                        class="chakra-checkbox__input"
+                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                        type="checkbox"
+                        value="Music"
+                      />
+                      <span
+                        aria-hidden="true"
+                        class="chakra-checkbox__control css-dnty2r"
+                      />
+                      <span
+                        class="chakra-checkbox__label css-1oeb2oe"
+                      >
+                        Music
+                      </span>
+                    </label>
+                    <label
+                      class="chakra-checkbox css-1052anv"
+                    >
+                      <input
+                        class="chakra-checkbox__input"
+                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                        type="checkbox"
+                        value="Sport"
+                      />
+                      <span
+                        aria-hidden="true"
+                        class="chakra-checkbox__control css-dnty2r"
+                      />
+                      <span
+                        class="chakra-checkbox__label css-1oeb2oe"
+                      >
+                        Sport
+                      </span>
+                    </label>
+                    <label
+                      class="chakra-checkbox css-1052anv"
+                    >
+                      <input
+                        class="chakra-checkbox__input"
+                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                        type="checkbox"
+                        value="Leisure"
+                      />
+                      <span
+                        aria-hidden="true"
+                        class="chakra-checkbox__control css-dnty2r"
+                      />
+                      <span
+                        class="chakra-checkbox__label css-1oeb2oe"
+                      >
+                        Leisure
+                      </span>
+                    </label>
+                    <label
+                      class="chakra-checkbox css-1052anv"
+                    >
+                      <input
+                        class="chakra-checkbox__input"
+                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                        type="checkbox"
+                        value="Outdoor"
+                      />
+                      <span
+                        aria-hidden="true"
+                        class="chakra-checkbox__control css-dnty2r"
+                      />
+                      <span
+                        class="chakra-checkbox__label css-1oeb2oe"
+                      >
+                        Outdoor
+                      </span>
+                    </label>
+                    <label
+                      class="chakra-checkbox css-1052anv"
+                    >
+                      <input
+                        class="chakra-checkbox__input"
+                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                        type="checkbox"
+                        value="Other"
+                      />
+                      <span
+                        aria-hidden="true"
+                        class="chakra-checkbox__control css-dnty2r"
+                      />
+                      <span
+                        class="chakra-checkbox__label css-1oeb2oe"
+                      >
+                        Other
+                      </span>
+                    </label>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

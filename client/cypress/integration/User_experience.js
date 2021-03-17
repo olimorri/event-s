@@ -7,7 +7,7 @@ describe('Attendee User', () => {
   });
   it('Navigates to the events page', () => {
     cy.contains('Events').click();
-    cy.url().should('include', '/events'
+    cy.url().should('include', '/events');
   });
   it('Navigates to login', () => {
     cy.get('button[id=menu-button-3]').click();

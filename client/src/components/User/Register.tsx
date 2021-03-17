@@ -172,6 +172,7 @@ export default function Register(props: UserProps) {
             <FormControl id="password"> */}
                 <FormLabel>Password</FormLabel>
                 <Input
+                  id="password"
                   type="password"
                   placeholder="Choose a password"
                   name="password"

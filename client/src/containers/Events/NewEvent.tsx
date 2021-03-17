@@ -121,7 +121,7 @@ export default function NewEvent({
                     value={event.name}
                     name="name"
                     onChange={handleInputChange}
-                    id="first_name"
+                    id="name"
                     placeholder="Type something..."
                   />
                 </FormControl>

@@ -1,6 +1,5 @@
-import { render, cleanup, screen, fireEvent } from '@testing-library/react';
-import { BrowserRouter, Router } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
+import { render, cleanup } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import { events } from '../../components/Event/EventMocks';
 import Events from './Events';
 

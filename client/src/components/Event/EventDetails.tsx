@@ -14,10 +14,8 @@ export default function EventDetails({
   signUpDown,
   user,
 }: EventDetailsProps) {
-  let { id, ...args }: { id: string } = useParams();
-  console.log(id, 'ID', args, 'ARGS');
+  let { id }: { id: string } = useParams();
   const event: Event | undefined = events.find((el: Event) => el._id === id);
-  console.log(event, 'EVENT');
   const attend = (e: MouseEvent): void => {
     e.preventDefault();
     signUpDown('up', id);

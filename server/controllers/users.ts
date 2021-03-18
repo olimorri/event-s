@@ -12,8 +12,6 @@ declare module 'express-session' {
 const create = async (req: Request, res: Response) => {
   const { email, password } = req.body;
   const user: IUser | null = await User.findOne({ email: email });
-  console.log(user, 'userrrrrr');
-  console.log(req.body, 'rekdatbaddy');
   if (user)
     return res
       .status(409)
